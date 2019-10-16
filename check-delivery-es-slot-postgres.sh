@@ -7,12 +7,12 @@ log_file=/opt/monitoring/log_file.txt
 
 sent_alert_1 () {
         echo "$(date), alert sent ... " >> $log_file
-        curl -X POST -H 'Content-Type: application/json' -d '{"chat_id": "<ID>", "text": "SANDBOX Delivery_es_slot has no rows when checking lsn ... !!!"}' https://api.telegram.org/bot396825577:AAFBYgJJIEu7ge2bxFREJKzAqdmuU_ENoqM/sendMessage
+        curl -X POST -H 'Content-Type: application/json' -d '{"chat_id": "<ID>", "text": "SANDBOX Delivery_es_slot has no rows when checking lsn ... !!!"}' https://api.telegram.org/bot<TOKEN>/sendMessage
 }
 
 sent_alert_2 () {
         echo "$(date), alert sent ... " >> $log_file
-        curl -X POST -H 'Content-Type: application/json' -d '{"chat_id": "<ID>", "text": " SANDBOX Delivery_es_slot | LSN_SENT and LSN_WRITE not match ..., please check !!!"}' https://api.telegram.org/bot396825577:AAFBYgJJIEu7ge2bxFREJKzAqdmuU_ENoqM/sendMessage
+        curl -X POST -H 'Content-Type: application/json' -d '{"chat_id": "<ID>", "text": " SANDBOX Delivery_es_slot | LSN_SENT and LSN_WRITE not match ..., please check !!!"}' https://api.telegram.org/bot<TOKEN>/sendMessage
 }
 
 auto_create_file () {
